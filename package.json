@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linadsol/frontend-intern-61.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +15,8 @@
   "license": "ISC",
   "bin": {
     "millionare": "bin/millionare.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
-}
+  }

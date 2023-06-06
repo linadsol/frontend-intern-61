@@ -1,3 +1,4 @@
 #!/usr/bin/env node
+import sayGreatings from '../src/cli.js';
 
-console.log('Добро пожаловать в игру "Кто хочет стать миллионером?"');
+sayGreatings();
