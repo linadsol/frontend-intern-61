@@ -119,4 +119,7 @@ export default [
       'Б: Android',
       'В: iOS',
       'Г: Symbian'],
-    'Б']];
+    'Б'],
+];
+
+
