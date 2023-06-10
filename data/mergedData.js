@@ -7,6 +7,6 @@ import arr6 from './questionsLinkevich.js';
 import arr7 from './questionsLinkevich2.js';
 
 export default () => {
-  const result = [arr1, arr2, arr3, arr4, arr5, arr6, arr7];
+  const result = [...arr1, ...arr2, ...arr3, arr4, ...arr5, ...arr6, ...arr7];
   return result;
 };
