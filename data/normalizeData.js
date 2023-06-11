@@ -2,7 +2,7 @@ import mergedData from './mergedData.js';
 
 export default () => {
   const data = mergedData();
-  const normalizeData = data.map(([question, answerOptions, answer]) => {
+  const makeTheFirstAnswerCorrectInOptions = data.map(([question, answerOptions, answer]) => {
     const options = [];
     let correctAnswer = '';
     // eslint-disable-next-line no-restricted-syntax
@@ -18,7 +18,7 @@ export default () => {
     return [question, normalazeOption];
   });
 
-  const normalizeDataWithoutFirstLetterInOptions = normalizeData.map(
+  const normalizeDataWithoutFirstLetterInOptions = makeTheFirstAnswerCorrectInOptions.map(
     (oneQuestion) => {
       const [question, options] = oneQuestion;
       const optionsWithoutFirstLetter = options
