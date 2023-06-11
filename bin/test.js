@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import normalizeData from "../data/normalizeData.js";
+import gameGenerator from '../src/gameGenerator.js';
 
-let normData = normalizeData();
-console.log(normData);
+console.log(gameGenerator());
