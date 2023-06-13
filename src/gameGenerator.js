@@ -1,12 +1,12 @@
-import normalizeData from '../data/normalizeData.js';
+import data from '../data/data.js';
 import { getRandomIntInclusive } from './utils.js';
 
 function gameGenerator() {
   const gameAssembly = [];
-  const dataQuestions = normalizeData();
+  const dataQuestions = data;
 
   while (gameAssembly.filter((item) => item !== undefined).length < 15) {
-    const numberQuestion = getRandomIntInclusive(0, dataQuestions.length);
+    const numberQuestion = getRandomIntInclusive(0, data.length);
     if (!gameAssembly.includes(dataQuestions[numberQuestion])) {
       gameAssembly.push(dataQuestions[numberQuestion]);
     }

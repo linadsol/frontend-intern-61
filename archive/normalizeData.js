@@ -24,7 +24,7 @@ export default () => {
       const optionsWithoutFirstLetter = options
         .filter((oneOption) => oneOption.length !== 0)
         .map((oneOption) => oneOption.slice(3));
-      return [question, optionsWithoutFirstLetter];
+      return [question, optionsWithoutFirstLetter].flat(1);
     },
   );
 
