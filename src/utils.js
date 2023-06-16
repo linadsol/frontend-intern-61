@@ -1,9 +1,10 @@
 // генерация рандомного числа в заданном диапазоне (максимум и минимум включаются)
-function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+function getRandomIntInclusive(minNumber, maxNumber) {
+  const min = Math.ceil(minNumber);
+  const max = Math.floor(maxNumber);
 
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// eslint-disable-next-line import/prefer-default-export
 export { getRandomIntInclusive };
