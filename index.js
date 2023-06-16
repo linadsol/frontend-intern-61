@@ -7,10 +7,12 @@ const userName = sayGreatings();
 const game = gameGen();
 const helpTest = ['50/50', 'Помощь зала', 'СМС другу'];
 
-const result = game.reduce((accum, curentItem) => {
-  const question = answersRandomizer(curentItem);
-  console.log(accum);
-  return roundLogic(question, helpTest, accum);
+const result = game.reduce((accum, curentItem, index) => {
+  if (accum === index) {
+    const question = answersRandomizer(curentItem);
+    return roundLogic(question, helpTest, accum);
+  }
+  return accum;
 }, 0);
 
 console.log(`Поздравляю ${userName}!!! Ваш счет ${result}`);
