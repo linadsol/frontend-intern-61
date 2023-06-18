@@ -4,11 +4,13 @@ import { getRandomIntInclusive } from './utils.js';
 function gameGenerator() {
   const gameAssembly = [];
   const dataQuestions = data;
+  let numberQuestion = 0;
 
   while (gameAssembly.filter((item) => item !== undefined).length < 15) {
-    const numberQuestion = getRandomIntInclusive(0, data.length);
-    if (!gameAssembly.includes(dataQuestions[numberQuestion])) {
-      gameAssembly.push(dataQuestions[numberQuestion]);
+    const numberArrayWithQuestions = getRandomIntInclusive(0, dataQuestions.length - 1);
+    if (!gameAssembly.includes(dataQuestions[numberArrayWithQuestions][numberQuestion])) {
+      gameAssembly.push(dataQuestions[numberArrayWithQuestions][numberQuestion]);
+      numberQuestion += 1;
     }
   }
 
