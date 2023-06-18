@@ -5,14 +5,14 @@ import answersRandomizer from './src/answersRandomizer.js';
 
 const userName = sayGreatings();
 const game = gameGen();
-const helpTest = ['50/50', 'Помощь зала', 'СМС другу'];
+const helpTest = ['50/50  |', 'Помощь зала  |', 'СМС другу'];
 
 const result = game.reduce((accum, curentItem, index) => {
-  if (accum === index) {
+  if (accum[0] === index) {
     const question = answersRandomizer(curentItem);
-    return roundLogic(question, helpTest, accum);
+    return roundLogic(question, accum[1], accum[0]);
   }
   return accum;
-}, 0);
+}, [0, helpTest]);
 
-console.log(`Поздравляю ${userName}!!! Ваш счет ${result}`);
+console.log(`Поздравляю ${userName}!!! Ваш счет ${result[0]}`);
