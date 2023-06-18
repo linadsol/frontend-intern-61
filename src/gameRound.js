@@ -1,4 +1,5 @@
 import readlineSync from 'readline-sync';
+import smsFriend from './smsFriend.js';
 
 export default (question, helpy, roundNumbery = 0) => {
   console.log(question[0]);
@@ -45,6 +46,7 @@ export default (question, helpy, roundNumbery = 0) => {
         helpExpression(help, goal);
       } else {
         help[2] = '    ';
+        smsFriend(question, roundNumber);
       // подсказка смс другу
       }
       newAnswer = readlineSync.question('');
