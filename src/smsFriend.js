@@ -10,7 +10,7 @@ export default (question, roundNumber) => {
   } else if (roundNumber < 10) {
     const randomNumber = getRandomIntInclusive(0, 100);
     if (randomNumber > 50) {
-      console.log(`Да, вопрос не лёгкий, но я на днях читал об этом. Думаю ответ - ${question[rightAnswer]}`);
+      console.log(`Да, вопрос не лёгкий, но я на днях читал об этом. Думаю ответ - ${rightAnswer}`);
     } else {
       console.log(`Сложный вопрос. Я не уверен, но мне кажется, что ответ - ${question[getRandomIntInclusive(2, 5)]}`);
     }
