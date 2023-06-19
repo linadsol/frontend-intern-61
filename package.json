@@ -14,8 +14,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "millionare": "bin/millionare.js",
-    "test": "bin/test.js"
+    "millionare": "bin/getMillion.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"

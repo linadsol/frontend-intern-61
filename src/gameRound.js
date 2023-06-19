@@ -18,6 +18,7 @@ export default (question, helpy, roundNumbery = 0) => {
 
   const answers = question.slice(2);
   console.log(answers.join('   '));
+  console.log(' ');
   console.log(`У Вас есть подсказки: ${help.join('  ')}`);
   console.log('Укажите правильный вариант ответа или введите 1 - для подсказки 50/50; 2 - для подсказки "Помощь зала"; 3 - для выбора подсказки "СМС другу"');
   console.log(`Сейчас Ваш выигрыш составляет ${goal}  , если вы хотите его забрать, введите значок "$"`);
@@ -61,11 +62,11 @@ export default (question, helpy, roundNumbery = 0) => {
     normalaizedUserAnswer = newAnswer.toUpperCase();
   }
   if (normalaizedUserAnswer === rightAnswer.slice(0, 1)) {
-    console.log('Это правильный ответ!');
+    console.log('\nЭто правильный ответ!\n');
     roundNumber += 1;
   } else if (normalaizedUserAnswer === 'A' || normalaizedUserAnswer === 'B' || normalaizedUserAnswer === 'C' || normalaizedUserAnswer === 'D') {
-    console.log('Ответ не правильный...');
-    console.log(`Правильный ответ ${rightAnswer}`);
+    console.log('\nОтвет не правильный...');
+    console.log(`Правильный ответ ${rightAnswer}\n`);
   }
   return [roundNumber, help];
 };
