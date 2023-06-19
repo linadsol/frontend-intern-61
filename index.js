@@ -14,7 +14,7 @@ export default () => {
       return roundLogic(question, accum[1], accum[0]);
     }
     return accum;
-  }, [0, helpTest]);
-
+  }, [0, helpTest], 0);
+  // const price = countWin(result[0], result[2]);
   console.log(`Поздравляю ${userName}!!! Ваш счет ${result[0]}`);
 };

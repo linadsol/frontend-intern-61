@@ -6,6 +6,7 @@ export default (question, helpy, roundNumbery = 0) => {
   console.log(question[0]);
   const rightAnswer = question[1];
   const help = [...helpy];
+  let takeMoney = false;
   const goal = 0;
   let roundNumber = roundNumbery;
 
@@ -53,6 +54,9 @@ export default (question, helpy, roundNumbery = 0) => {
       // подсказка смс другу
       }
       newAnswer = readlineSync.question('');
+    } else if (normalaizedUserAnswer === '$') {
+      takeMoney = true;
+      break;
     } else {
       console.log('Вы ввели неверные данные...');
       console.log('Введите вариант ответа в виде буквы на английском языке в любом регистре или число от 1 до 3, если выхотите использовать подсказку');
@@ -68,5 +72,5 @@ export default (question, helpy, roundNumbery = 0) => {
     console.log('\nОтвет не правильный...');
     console.log(`Правильный ответ ${rightAnswer}\n`);
   }
-  return [roundNumber, help];
+  return [roundNumber, help, takeMoney];
 };
