@@ -17,5 +17,7 @@ export default () => {
     return accum;
   }, [0, helpTest], 0);
   // const price = countWin(result[0], result[2]);
-  console.log(`Поздравляю ${userName}!!! Ваш счет пополнился на ${winningsCounter(result[0])} рублей`);
+  const [counterRounds, , takeMoney] = result;
+
+  console.log(`Поздравляю ${userName}!!! Ваш счет пополнился на ${winningsCounter(counterRounds, takeMoney)} рублей`);
 };

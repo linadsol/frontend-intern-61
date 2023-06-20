@@ -12,7 +12,7 @@ export default (question, roundNumber) => {
     if (randomNumber > 50) {
       console.log(`Да, вопрос не лёгкий, но я на днях читал об этом. Думаю ответ - ${rightAnswer}`);
     } else {
-      console.log(`Сложный вопрос. Я не уверен, но мне кажется, что ответ - ${question[getRandomIntInclusive(2, 5)]}`);
+      console.log(`Это сложный вопрос. Я не уверен и могу ошибиться, но мне кажется, что ответ - ${question[getRandomIntInclusive(2, 5)]}`);
     }
   } else if (roundNumber < 14) {
     console.log(`Ох.... прости, я не знаю ответа на этот вопрос. Могу только угадать, пусть будет - ${question[getRandomIntInclusive(2, 5)]}`);
