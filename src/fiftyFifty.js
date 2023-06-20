@@ -1,21 +1,18 @@
-export default (question, helps) => {
+export default (question1, helps) => {
+  let counter = 0;
+  const question = [...question1];
   const rightAnswer = question[1];
-  const wrongAnswer = [];
+  const wrigtIndex = Math.floor(Math.random() * 3);
   for (let i = 2; i < question.length; i += 1) {
     if (question[i] !== rightAnswer) {
-      wrongAnswer.push(i);
+      if (counter !== wrigtIndex) {
+        question[i] = '    ';
+      }
+      counter += 1;
     }
-    const indexWrong1 = wrongAnswer[Math.floor(Math.random() * 2)];
-    let indexWrong2 = wrongAnswer[Math.floor(Math.random() * 2)];
-    while (indexWrong2 === indexWrong1) {
-      indexWrong2 = wrongAnswer[Math.floor(Math.random() * 2)];
-    }
-
-    question[indexWrong1] = '    ';
-    question[indexWrong2] = '    ';
   }
   console.log(question[0]);
-  console.log(question[2], question[3], question[4], question[5]);
+  console.log(question.slice(2).join('    '));
   console.log(`У Вас есть подсказки: ${helps.join('  ')}`);
   return question;
 };
