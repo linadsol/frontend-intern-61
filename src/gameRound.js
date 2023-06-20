@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import smsFriend from './smsFriend.js';
 import holeHelp from './holeHelp.js';
+import fiftyFifty from './fiftyFifty.js';
 import winningsCounter from './winningsCounter.js';
 
 export default (question, helpy, roundNumbery = 0) => {
@@ -8,14 +9,14 @@ export default (question, helpy, roundNumbery = 0) => {
   const rightAnswer = question[1];
   const help = [...helpy];
   let takeMoney = false;
-  const goal = 0;
+  const goal = winningsCounter(roundNumbery);
   let roundNumber = roundNumbery;
 
   const helpExpression = (helps, money = 0) => {
     console.log('Вы уже использовали эту подсказку');
     console.log(`У Вас есть подсказки: ${helps.join('  ')}`);
     console.log('Укажите правильный вариант ответа или введите 1 - для подсказки 50/50; 2 - для подсказки "Помощь зала"; 3 - для выбора подсказки "СМС другу"');
-    console.log(`Сейчас Ваш выигрыш составляет ${winningsCounter(roundNumber)} рублей, если вы хотите его забрать, введите значок "$"`);
+    console.log(`Сейчас Ваш выигрыш составляет ${money} рублей, если вы хотите его забрать, введите значок "$"`);
   };
 
   const answers = question.slice(2);
@@ -23,7 +24,7 @@ export default (question, helpy, roundNumbery = 0) => {
   console.log(' ');
   console.log(`У Вас есть подсказки: ${help.join('  ')}`);
   console.log('Укажите правильный вариант ответа или введите 1 - для подсказки 50/50; 2 - для подсказки "Помощь зала"; 3 - для выбора подсказки "СМС другу"');
-  console.log(`Сейчас Ваш выигрыш составляет ${winningsCounter(roundNumber)} рублей, если вы хотите его забрать, введите значок "$"`);
+  console.log(`Сейчас Ваш выигрыш составляет ${goal} рублей, если вы хотите его забрать, введите значок "$"`);
   const userAnswer = readlineSync.question('');
   let normalaizedUserAnswer = userAnswer.toUpperCase();
 
@@ -34,7 +35,8 @@ export default (question, helpy, roundNumbery = 0) => {
         helpExpression(help, goal);
       } else {
         help[0] = '    ';
-      // подсказка 50/50
+        fiftyFifty(question, help);
+        // подсказка 50/50
       }
       newAnswer = readlineSync.question('');
     } else if (normalaizedUserAnswer === '2') {
@@ -43,7 +45,6 @@ export default (question, helpy, roundNumbery = 0) => {
       } else {
         help[1] = '    ';
         holeHelp(question, roundNumber);
-      // подсказка помощь зала
       }
       newAnswer = readlineSync.question('');
     } else if (normalaizedUserAnswer === '3') {
@@ -52,7 +53,6 @@ export default (question, helpy, roundNumbery = 0) => {
       } else {
         help[2] = '    ';
         smsFriend(question, roundNumber);
-      // подсказка смс другу
       }
       newAnswer = readlineSync.question('');
     } else if (normalaizedUserAnswer === '$') {
