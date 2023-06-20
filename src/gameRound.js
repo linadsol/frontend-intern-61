@@ -4,7 +4,8 @@ import holeHelp from './holeHelp.js';
 import fiftyFifty from './fiftyFifty.js';
 import winningsCounter from './winningsCounter.js';
 
-export default (question, helpy, roundNumbery = 0) => {
+export default (question1, helpy, roundNumbery = 0) => {
+  let question = [...question1];
   console.log(question[0]);
   const rightAnswer = question[1];
   const help = [...helpy];
@@ -35,7 +36,7 @@ export default (question, helpy, roundNumbery = 0) => {
         helpExpression(help, goal);
       } else {
         help[0] = '    ';
-        fiftyFifty(question, help);
+        question = [...fiftyFifty(question, help)];
         // подсказка 50/50
       }
       newAnswer = readlineSync.question('');
