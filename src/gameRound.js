@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import smsFriend from './smsFriend.js';
 import holeHelp from './holeHelp.js';
+import fiftyFifty from './fiftyFifty.js';
 
 export default (question, helpy, roundNumbery = 0) => {
   console.log(question[0]);
@@ -33,7 +34,8 @@ export default (question, helpy, roundNumbery = 0) => {
         helpExpression(help, goal);
       } else {
         help[0] = '    ';
-      // подсказка 50/50
+        fiftyFifty(question, help);
+        // подсказка 50/50
       }
       newAnswer = readlineSync.question('');
     } else if (normalaizedUserAnswer === '2') {
