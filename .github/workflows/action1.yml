@@ -1,4 +1,4 @@
-name: diff tests
+name: linter and Jest tests
 on: push
 jobs:
   build:
