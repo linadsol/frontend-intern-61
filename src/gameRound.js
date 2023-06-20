@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import smsFriend from './smsFriend.js';
 import holeHelp from './holeHelp.js';
 import fiftyFifty from './fiftyFifty.js';
+import winningsCounter from './winningsCounter.js';
 
 export default (question, helpy, roundNumbery = 0) => {
   console.log(question[0]);
@@ -15,7 +16,7 @@ export default (question, helpy, roundNumbery = 0) => {
     console.log('Вы уже использовали эту подсказку');
     console.log(`У Вас есть подсказки: ${helps.join('  ')}`);
     console.log('Укажите правильный вариант ответа или введите 1 - для подсказки 50/50; 2 - для подсказки "Помощь зала"; 3 - для выбора подсказки "СМС другу"');
-    console.log(`Сейчас Ваш выигрыш составляет ${money}  , если вы хотите его забрать, введите значок "$"`);
+    console.log(`Сейчас Ваш выигрыш составляет ${winningsCounter(roundNumber)} рублей, если вы хотите его забрать, введите значок "$"`);
   };
 
   const answers = question.slice(2);
@@ -23,7 +24,7 @@ export default (question, helpy, roundNumbery = 0) => {
   console.log(' ');
   console.log(`У Вас есть подсказки: ${help.join('  ')}`);
   console.log('Укажите правильный вариант ответа или введите 1 - для подсказки 50/50; 2 - для подсказки "Помощь зала"; 3 - для выбора подсказки "СМС другу"');
-  console.log(`Сейчас Ваш выигрыш составляет ${goal}  , если вы хотите его забрать, введите значок "$"`);
+  console.log(`Сейчас Ваш выигрыш составляет ${winningsCounter(roundNumber)} рублей, если вы хотите его забрать, введите значок "$"`);
   const userAnswer = readlineSync.question('');
   let normalaizedUserAnswer = userAnswer.toUpperCase();
 

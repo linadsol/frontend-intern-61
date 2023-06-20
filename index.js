@@ -2,6 +2,7 @@ import sayGreatings from './src/cli.js';
 import roundLogic from './src/gameRound.js';
 import gameGen from './src/gameGenerator.js';
 import answersRandomizer from './src/answersRandomizer.js';
+import winningsCounter from './src/winningsCounter.js';
 
 export default () => {
   const userName = sayGreatings();
@@ -16,5 +17,5 @@ export default () => {
     return accum;
   }, [0, helpTest], 0);
   // const price = countWin(result[0], result[2]);
-  console.log(`Поздравляю ${userName}!!! Ваш счет ${result[0]}`);
+  console.log(`Поздравляю ${userName}!!! Ваш счет пополнился на ${winningsCounter(result[0])} рублей`);
 };
