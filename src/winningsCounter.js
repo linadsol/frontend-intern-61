@@ -44,5 +44,5 @@ export default (goal, takeMoney = true) => {
       return 32000;
     }
   }
-  return 0;
+  return 'если число не выведено, то в winningsCounter ошибка';
 };
