@@ -9,7 +9,7 @@
     "url": "git+https://github.com/linadsol/frontend-intern-61.git"
   },
   "scripts": {
-    "test": "npx jest"
+    "test": "jest"
   },
   "author": "IT_DANCERS",
   "license": "ISC",
