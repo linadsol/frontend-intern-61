@@ -20,6 +20,7 @@ const logic = (ans, rightAns, min, max) => {
   console.log(hallAnswer.join('   '));
   console.log(`Затруднились с ответом ${wrongPercent} %`);
   console.log('Напомним, что вам не обязательно с ним соглашаться.');
+  return hallAnswer;
 };
 
 export default (question, roundNumber) => {
@@ -27,10 +28,13 @@ export default (question, roundNumber) => {
   const answers = question.slice(2).filter((item) => item !== '    ');
   const rightAnswer = question[1];
   if (roundNumber < 5) {
-    logic(answers, rightAnswer, 70, 80);
-  } else if (roundNumber < 10) {
-    logic(answers, rightAnswer, 40, 60);
-  } else if (roundNumber < 15) {
-    logic(answers, rightAnswer, 0, 40);
+    return logic(answers, rightAnswer, 70, 80);
   }
+  if (roundNumber < 10) {
+    return logic(answers, rightAnswer, 40, 60);
+  }
+  if (roundNumber < 15) {
+    return logic(answers, rightAnswer, 0, 40);
+  }
+  return undefined;
 };
