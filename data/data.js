@@ -204,4 +204,3 @@ export default [
     ['Какой командой можно переключиться на другую ветку?', 'git checkout', 'git switch', 'git change', 'git select'],
     ['Какой командой можно удалить ветку?', 'git branch -d', 'git delete branch', 'git remove branch', 'git branch delete'],
     ['Какой командой можно создать тег для определенного коммита?', 'git tag', 'git label', 'git mark', 'git stamp']]];
-
