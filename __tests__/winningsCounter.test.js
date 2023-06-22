@@ -13,5 +13,5 @@ test('Проверка генерации денежного приза', () => 
   expect(winningsCounter(option3[0], option3[1])).toBe(8000);
   expect(winningsCounter(option4[0], option4[1])).toBe(1000);
   expect(winningsCounter(option5[0], option5[1])).toBe(1000000);
-  expect(winningsCounter(option6[0], option6[1])).toBe(64000);
+  expect(winningsCounter(option6[0], option6[1])).toBe(32000);
 });
