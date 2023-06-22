@@ -1,3 +1,6 @@
 node_modules/
+coverage/
 
 src/my.js
+
+bin/test.js
