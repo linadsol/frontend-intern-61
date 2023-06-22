@@ -6,7 +6,7 @@
 
 [![linter and Jest tests](https://github.com/linadsol/frontend-intern-61/actions/workflows/action1.yml/badge.svg?branch=develop&event=push)](https://github.com/linadsol/frontend-intern-61/actions/workflows/action1.yml)
 
-№№№ Проверка Test Coverage
+### Проверка Test Coverage
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/59a2bf640f6ede2e7b5a/test_coverage)](https://codeclimate.com/github/linadsol/frontend-intern-61/test_coverage)
 
