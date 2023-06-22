@@ -21,4 +21,5 @@ export default (question, roundNumber) => {
   } else if (roundNumber < 14) {
     console.log(`Ох.... прости, я не знаю ответа на этот вопрос. Могу только угадать, пусть будет - ${randomAnswer}`);
   }
+  return [rightAnswer, randomAnswer];
 };
