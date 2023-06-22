@@ -5,3 +5,4 @@
 ### Проверка GIT ACTIONS
 
 [![linter and Jest tests](https://github.com/linadsol/frontend-intern-61/actions/workflows/action1.yml/badge.svg?branch=develop&event=push)](https://github.com/linadsol/frontend-intern-61/actions/workflows/action1.yml)
+
