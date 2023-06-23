@@ -11,6 +11,8 @@ export default (question1, helps) => {
       counter += 1;
     }
   }
+  console.log('');
+  console.log('Убираем два неправильных ответа. Напомним вопрос:');
   console.log(question[0]);
   console.log(question.slice(2).join('    '));
   console.log(`У Вас есть подсказки: ${helps.join('  ')}`);

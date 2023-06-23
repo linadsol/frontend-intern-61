@@ -5,6 +5,7 @@ export default (question, roundNumber) => {
   const randomAnswer = normalizeQuestion[getRandomIntInclusive(2, normalizeQuestion.length - 1)];
   const rightAnswer = normalizeQuestion[1];
 
+  console.log('');
   console.log('Привет, давно не общались :)');
   console.log('Я постарась тебе помочь.');
   console.log(`Тааак, ${normalizeQuestion[0].toLowerCase()}`);
