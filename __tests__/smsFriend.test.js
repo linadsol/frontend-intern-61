@@ -1,11 +1,10 @@
 import smsFriend from '../src/smsFriend.js';
-import data from '../data/data.js';
 import genGame from '../src/gameGenerator.js';
 import { getRandomIntInclusive } from '../src/utils.js';
 import answerRandomizer from '../src/answersRandomizer.js';
 import fiftyFifty from '../src/fiftyFifty.js';
 
-const game = genGame(data);
+const game = genGame();
 const question = game[getRandomIntInclusive(0, 14)];
 const questionMarked = answerRandomizer(question);
 const help = ['50/50  |', 'Помощь зала  |', 'СМС другу'];
