@@ -31,41 +31,46 @@ export default (question1, helpy, roundNumbery = 0) => {
   const userAnswer = readlineSync.question('');
   let normalaizedUserAnswer = userAnswer.toUpperCase();
 
-  while (normalaizedUserAnswer !== 'A' && normalaizedUserAnswer !== 'B' && normalaizedUserAnswer !== 'C' && normalaizedUserAnswer !== 'D') {
+  while (normalaizedUserAnswer !== 'A' && normalaizedUserAnswer !== 'B' && normalaizedUserAnswer !== 'C' && normalaizedUserAnswer !== 'D' && normalaizedUserAnswer !== '$') {
     let newAnswer = normalaizedUserAnswer;
-    if (normalaizedUserAnswer === '1') {
-      if (help[0] === '    ') {
-        helpExpression(help, goal);
-      } else {
-        help[0] = '    ';
-        question = [...fiftyFifty(question, help)];
-        // подсказка 50/50
-      }
-      newAnswer = readlineSync.question('');
-    } else if (normalaizedUserAnswer === '2') {
-      if (help[1] === '    ') {
-        helpExpression(help, goal);
-      } else {
-        help[1] = '    ';
-        holeHelp(question, roundNumber);
-      }
-      newAnswer = readlineSync.question('');
-    } else if (normalaizedUserAnswer === '3') {
-      if (help[2] === '    ') {
-        helpExpression(help, goal);
-      } else {
-        help[2] = '    ';
-        smsFriend(question, roundNumber);
-      }
-      newAnswer = readlineSync.question('');
-    } else if (normalaizedUserAnswer === '$') {
-      takeMoney = true;
-      break;
-    } else {
-      console.log('Вы ввели неверные данные...');
-      console.log('Введите вариант ответа в виде буквы на английском языке в любом регистре или число от 1 до 3, если выхотите использовать подсказку');
-      console.log('Чтобы забрать выигрыш введите "$"');
-      newAnswer = readlineSync.question('');
+    switch (normalaizedUserAnswer) {
+      case '1':
+        if (help[0] === '    ') {
+          helpExpression(help, goal);
+        } else {
+          help[0] = '    ';
+          question = [...fiftyFifty(question, help)];
+          // подсказка 50/50
+        }
+        newAnswer = readlineSync.question('');
+        break;
+      case '2':
+        if (help[1] === '    ') {
+          helpExpression(help, goal);
+        } else {
+          help[1] = '    ';
+          holeHelp(question, roundNumber);
+        }
+        newAnswer = readlineSync.question('');
+        break;
+      case '3':
+        if (help[2] === '    ') {
+          helpExpression(help, goal);
+        } else {
+          help[2] = '    ';
+          smsFriend(question, roundNumber);
+        }
+        newAnswer = readlineSync.question('');
+        break;
+      case '$':
+        takeMoney = true;
+        break;
+      default:
+        console.log('Вы ввели неверные данные...');
+        console.log('Введите вариант ответа в виде буквы на английском языке в любом регистре или число от 1 до 3, если выхотите использовать подсказку');
+        console.log('Чтобы забрать выигрыш введите "$"');
+        newAnswer = readlineSync.question('');
+        break;
     }
     normalaizedUserAnswer = newAnswer.toUpperCase();
   }
