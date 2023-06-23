@@ -16,6 +16,7 @@ const logic = (ans, rightAns, min, max) => {
     wrongPercent -= percent;
     return result.join(': ');
   });
+  console.log('');
   console.log('Вот мнение нашего зала:');
   console.log(hallAnswer.join('   '));
   console.log(`Затруднились с ответом ${wrongPercent} %`);
@@ -24,6 +25,7 @@ const logic = (ans, rightAns, min, max) => {
 };
 
 export default (question, roundNumber) => {
+  console.log('');
   console.log('Давайте спросим мнение у нашего уважаемого зала. Может быть он знает ответ?');
   const answers = question.slice(2).filter((item) => item !== '    ');
   const rightAnswer = question[1];

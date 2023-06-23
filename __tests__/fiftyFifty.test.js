@@ -1,9 +1,8 @@
 import fiftyFifty from '../src/fiftyFifty.js';
-import data from '../data/data.js';
 import genGame from '../src/gameGenerator.js';
 import { getRandomIntInclusive } from '../src/utils.js';
 
-const game = genGame(data);
+const game = genGame();
 const question = game[getRandomIntInclusive(0, 14)];
 const help = ['    ', 'Помощь зала  |', 'СМС другу'];
 

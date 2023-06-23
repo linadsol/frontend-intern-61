@@ -5,8 +5,8 @@ import answersRandomizer from './src/answersRandomizer.js';
 import winningsCounter from './src/winningsCounter.js';
 
 export default () => {
-  const userName = sayGreatings();
-  const game = gameGen();
+  const userData = sayGreatings();
+  const game = gameGen(userData[1]);
   const helpTest = ['50/50  |', 'Помощь зала  |', 'СМС другу'];
 
   const result = game.reduce((accum, curentItem, index) => {
@@ -19,5 +19,5 @@ export default () => {
   // const price = countWin(result[0], result[2]);
   const [counterRounds, , takeMoney] = result;
 
-  console.log(`Поздравляю ${userName}!!! Ваш счет пополнился на ${winningsCounter(counterRounds, takeMoney)} рублей`);
+  console.log(`Поздравляю ${userData[0]}!!! Ваш счет пополнился на ${winningsCounter(counterRounds, takeMoney)} рублей`);
 };
