@@ -31,7 +31,7 @@ export default (question1, helpy, roundNumbery = 0) => {
   const userAnswer = readlineSync.question('');
   let normalaizedUserAnswer = userAnswer.toUpperCase();
 
-  while (normalaizedUserAnswer !== 'A' && normalaizedUserAnswer !== 'B' && normalaizedUserAnswer !== 'C' && normalaizedUserAnswer !== 'D') {
+  while (normalaizedUserAnswer !== 'A' && normalaizedUserAnswer !== 'B' && normalaizedUserAnswer !== 'C' && normalaizedUserAnswer !== 'D' && normalaizedUserAnswer !== '$') {
     let newAnswer = normalaizedUserAnswer;
     switch (normalaizedUserAnswer) {
       case '1':
