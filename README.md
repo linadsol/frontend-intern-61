@@ -23,7 +23,7 @@ cd frontend-intern-61
 make install
 ```
 
-## Запуск игры
+## Запуск игры 🚀
 
 ```
 make getMillion
