@@ -71,6 +71,6 @@ A: Париж   B: Минск   C: Гомель   D: Кировград
 ```
 
 
-##  Askiinema
+##  asciinema
 
 [![asciicast](https://asciinema.org/a/J5MpsdT9CtthQI55Xgm1kMxbS.svg)](https://asciinema.org/a/J5MpsdT9CtthQI55Xgm1kMxbS)
