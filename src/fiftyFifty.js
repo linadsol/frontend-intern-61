@@ -12,9 +12,11 @@ export default (question1, helps) => {
     }
   }
   console.log('');
-  console.log('Убираем два неправильных ответа. Напомним вопрос:');
-  console.log(question[0]);
+  console.log('Убираем два неправильных ответа.');
+  console.log('');
+  console.log(`Напомним вопрос: ${question[0].toLowerCase()}`);
   console.log(question.slice(2).join('    '));
+  console.log('');
   console.log(`У Вас есть подсказки: ${helps.join('  ')}`);
   return question;
 };

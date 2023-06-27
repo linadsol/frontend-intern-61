@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import gameEngine from '../index.js';
+import gameEngine from '../src/index.js';
 
 gameEngine();

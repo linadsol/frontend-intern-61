@@ -1,8 +1,8 @@
-import sayGreatings from './src/cli.js';
-import roundLogic from './src/gameRound.js';
-import gameGen from './src/gameGenerator.js';
-import answersRandomizer from './src/answersRandomizer.js';
-import winningsCounter from './src/winningsCounter.js';
+import sayGreatings from './cli.js';
+import roundLogic from './gameRound.js';
+import gameGen from './gameGenerator.js';
+import answersRandomizer from './answersRandomizer.js';
+import winningsCounter from './winningsCounter.js';
 
 export default () => {
   const userData = sayGreatings();
@@ -16,7 +16,6 @@ export default () => {
     }
     return accum;
   }, [0, helpTest], 0);
-  // const price = countWin(result[0], result[2]);
   const [counterRounds, , takeMoney] = result;
 
   console.log(`Поздравляю ${userData[0]}!!! Ваш счет пополнился на ${winningsCounter(counterRounds, takeMoney)} рублей`);
