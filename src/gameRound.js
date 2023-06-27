@@ -47,11 +47,14 @@ export default (question1, helpy, roundNumbery = 0) => {
         newAnswer = readlineSync.question('Ваш ответ: ');
         break;
       case '2':
-        if (help[1] === '    ') {
-          helpExpression(help, goal);
-        } else {
-          help[1] = '    ';
-          holeHelp(question, roundNumber);
+        switch (help[1]) {
+          case '    ':
+            helpExpression(help, goal);
+            break;
+          default:
+            help[1] = '    ';
+            holeHelp(question, roundNumber);
+            break;
         }
         console.log('');
         newAnswer = readlineSync.question('Ваш ответ: ');
