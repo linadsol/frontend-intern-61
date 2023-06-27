@@ -7,8 +7,11 @@ export default (question, roundNumber) => {
 
   console.log('');
   console.log('Привет, давно не общались :)');
-  console.log('Я постарась тебе помочь.');
+  console.log('');
+  console.log('Я постарась тебе помочь....');
+  console.log('');
   console.log(`Тааак, ${normalizeQuestion[0].toLowerCase()}`);
+  console.log('');
 
   if (roundNumber < 5) {
     console.log(`Хорошо что вопрос такой легкий, я уверен что ответ - ${rightAnswer}`);
