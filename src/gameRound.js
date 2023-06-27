@@ -88,7 +88,13 @@ export default (question1, helpy, roundNumbery = 0) => {
   } else if (normalaizedUserAnswer === 'A' || normalaizedUserAnswer === 'B' || normalaizedUserAnswer === 'C' || normalaizedUserAnswer === 'D') {
     takeMoney = false;
     console.log('\nОтвет не правильный...');
+    console.log('');
     console.log(`Правильный ответ ${rightAnswer}\n`);
   }
+
+  console.log('');
+  readlineSync.question('Для продолжения нажмите Enter:');
+  console.log('');
+
   return [roundNumber, help, takeMoney];
 };
