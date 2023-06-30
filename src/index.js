@@ -18,5 +18,7 @@ export default () => {
   }, [0, helpTest], 0);
   const [counterRounds, , takeMoney] = result;
 
+  console.clear();
+
   console.log(`Поздравляю ${userData[0]}!!! Ваш счет пополнился на ${winningsCounter(counterRounds, takeMoney)} рублей`);
 };

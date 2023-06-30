@@ -12,6 +12,9 @@ export default (question1, helpy, roundNumbery = 0) => {
   const goal = winningsCounter(roundNumbery);
   let roundNumber = roundNumbery;
 
+  console.log('');
+  console.clear();
+
   console.log(`Вопрос №${roundNumber + 1}\n`);
   console.log(question[0]);
 
@@ -83,9 +86,13 @@ export default (question1, helpy, roundNumbery = 0) => {
     normalaizedUserAnswer = newAnswer.toUpperCase();
   }
   if (normalaizedUserAnswer === rightAnswer.slice(0, 1)) {
+    console.clear();
+
     console.log('\nЭто правильный ответ!\n');
     roundNumber += 1;
   } else if (normalaizedUserAnswer === 'A' || normalaizedUserAnswer === 'B' || normalaizedUserAnswer === 'C' || normalaizedUserAnswer === 'D') {
+    console.clear();
+
     takeMoney = false;
     console.log('\nОтвет не правильный...');
     console.log('');

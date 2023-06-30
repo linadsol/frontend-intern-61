@@ -27,6 +27,8 @@ const logic = (ans, rightAns, min, max) => {
 export default (question, roundNumber) => {
   console.log('');
   console.log('Давайте спросим мнение у нашего уважаемого зала. Может быть он знает ответ?');
+  console.log('');
+  console.log(`Повторяем вопрос: ${question[0].toLowerCase()}`);
   const answers = question.slice(2).filter((item) => item !== '    ');
   const rightAnswer = question[1];
   if (roundNumber < 5) {
